@@ -8,22 +8,54 @@
 
 /* Begin PBXBuildFile section */
 		18C03CCB1E3CEDE700068525 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C03CCA1E3CEDE600068525 /* AppDelegate.swift */; };
-		18C03CCD1E3CEDE700068525 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C03CCC1E3CEDE700068525 /* ViewController.swift */; };
 		18C03CD01E3CEDE700068525 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C03CCE1E3CEDE700068525 /* Main.storyboard */; };
 		18C03CD31E3CEDE700068525 /* runIOT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18C03CD11E3CEDE700068525 /* runIOT.xcdatamodeld */; };
 		18C03CD51E3CEDE700068525 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C03CD41E3CEDE700068525 /* Assets.xcassets */; };
 		18C03CD81E3CEDE700068525 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C03CD61E3CEDE700068525 /* LaunchScreen.storyboard */; };
+		18C03CE01E3CEFF600068525 /* ninja512.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C03CDF1E3CEFF600068525 /* ninja512.png */; };
+		18C03CE21E3CF1F600068525 /* menuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C03CE11E3CF1F600068525 /* menuController.swift */; };
+		18C03CEE1E3CF31C00068525 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C03CE61E3CF31C00068525 /* MMDrawerBarButtonItem.m */; };
+		18C03CEF1E3CF31C00068525 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C03CE81E3CF31C00068525 /* MMDrawerController.m */; };
+		18C03CF01E3CF31C00068525 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C03CEB1E3CF31C00068525 /* MMDrawerVisualState.m */; };
+		18C03CF11E3CF31C00068525 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C03CED1E3CF31C00068525 /* UIViewController+MMDrawerController.m */; };
+		18C03CF31E3CFCE600068525 /* centerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C03CF21E3CFCE600068525 /* centerViewController.swift */; };
+		18ED4B6F1E3D0551000880EE /* ninja512.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18ED4B6E1E3D0551000880EE /* ninja512.jpg */; };
+		18ED4B771E3D0E83000880EE /* menuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED4B761E3D0E83000880EE /* menuTableViewCell.swift */; };
+		18ED4B791E3D1447000880EE /* aboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED4B781E3D1447000880EE /* aboutViewController.swift */; };
+		18ED4B7B1E3D18FC000880EE /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED4B7A1E3D18FC000880EE /* settingsViewController.swift */; };
+		18ED4B7D1E3D2211000880EE /* collCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED4B7C1E3D2211000880EE /* collCollectionViewCell.swift */; };
+		3AB91D118225E5C36BA4D187 /* Pods_runIOT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DD3BAAD9AA1642AA403FB8 /* Pods_runIOT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18C03CC71E3CEDE600068525 /* runIOT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = runIOT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C03CCA1E3CEDE600068525 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18C03CCC1E3CEDE700068525 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18C03CCF1E3CEDE700068525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18C03CD21E3CEDE700068525 /* runIOT.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = runIOT.xcdatamodel; sourceTree = "<group>"; };
 		18C03CD41E3CEDE700068525 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18C03CD71E3CEDE700068525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18C03CD91E3CEDE700068525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18C03CDF1E3CEFF600068525 /* ninja512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ninja512.png; path = Assets.xcassets/ninja512.png; sourceTree = "<group>"; };
+		18C03CE11E3CF1F600068525 /* menuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuController.swift; sourceTree = "<group>"; };
+		18C03CE41E3CF31B00068525 /* runIOT-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "runIOT-Bridging-Header.h"; sourceTree = "<group>"; };
+		18C03CE51E3CF31C00068525 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		18C03CE61E3CF31C00068525 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		18C03CE71E3CF31C00068525 /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		18C03CE81E3CF31C00068525 /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		18C03CE91E3CF31C00068525 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		18C03CEA1E3CF31C00068525 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		18C03CEB1E3CF31C00068525 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		18C03CEC1E3CF31C00068525 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		18C03CED1E3CF31C00068525 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		18C03CF21E3CFCE600068525 /* centerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = centerViewController.swift; sourceTree = "<group>"; };
+		18ED4B6E1E3D0551000880EE /* ninja512.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ninja512.jpg; path = Assets.xcassets/ninja512.jpg; sourceTree = "<group>"; };
+		18ED4B761E3D0E83000880EE /* menuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuTableViewCell.swift; sourceTree = "<group>"; };
+		18ED4B781E3D1447000880EE /* aboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aboutViewController.swift; sourceTree = "<group>"; };
+		18ED4B7A1E3D18FC000880EE /* settingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
+		18ED4B7C1E3D2211000880EE /* collCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collCollectionViewCell.swift; sourceTree = "<group>"; };
+		27DD3BAAD9AA1642AA403FB8 /* Pods_runIOT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_runIOT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43C8DA19F60D8AFE10D027D2 /* Pods-runIOT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-runIOT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-runIOT/Pods-runIOT.debug.xcconfig"; sourceTree = "<group>"; };
+		C6F67761E422C07CA8EE072A /* Pods-runIOT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-runIOT.release.xcconfig"; path = "Pods/Target Support Files/Pods-runIOT/Pods-runIOT.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AB91D118225E5C36BA4D187 /* Pods_runIOT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +75,8 @@
 			children = (
 				18C03CC91E3CEDE600068525 /* runIOT */,
 				18C03CC81E3CEDE600068525 /* Products */,
+				DBCE85148E0A1EA6CFCF60F2 /* Pods */,
+				34F70B8BD3E310E8FB4DD1D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +91,57 @@
 		18C03CC91E3CEDE600068525 /* runIOT */ = {
 			isa = PBXGroup;
 			children = (
+				18ED4B6E1E3D0551000880EE /* ninja512.jpg */,
+				18C03CE31E3CF2A700068525 /* MMdrawer */,
 				18C03CCA1E3CEDE600068525 /* AppDelegate.swift */,
-				18C03CCC1E3CEDE700068525 /* ViewController.swift */,
 				18C03CCE1E3CEDE700068525 /* Main.storyboard */,
 				18C03CD41E3CEDE700068525 /* Assets.xcassets */,
 				18C03CD61E3CEDE700068525 /* LaunchScreen.storyboard */,
+				18C03CDF1E3CEFF600068525 /* ninja512.png */,
 				18C03CD91E3CEDE700068525 /* Info.plist */,
 				18C03CD11E3CEDE700068525 /* runIOT.xcdatamodeld */,
+				18C03CE11E3CF1F600068525 /* menuController.swift */,
+				18C03CF21E3CFCE600068525 /* centerViewController.swift */,
+				18ED4B761E3D0E83000880EE /* menuTableViewCell.swift */,
+				18ED4B781E3D1447000880EE /* aboutViewController.swift */,
+				18ED4B7A1E3D18FC000880EE /* settingsViewController.swift */,
+				18ED4B7C1E3D2211000880EE /* collCollectionViewCell.swift */,
 			);
 			path = runIOT;
+			sourceTree = "<group>";
+		};
+		18C03CE31E3CF2A700068525 /* MMdrawer */ = {
+			isa = PBXGroup;
+			children = (
+				18C03CE51E3CF31C00068525 /* MMDrawerBarButtonItem.h */,
+				18C03CE61E3CF31C00068525 /* MMDrawerBarButtonItem.m */,
+				18C03CE71E3CF31C00068525 /* MMDrawerController.h */,
+				18C03CE81E3CF31C00068525 /* MMDrawerController.m */,
+				18C03CE91E3CF31C00068525 /* MMDrawerController+Subclass.h */,
+				18C03CEA1E3CF31C00068525 /* MMDrawerVisualState.h */,
+				18C03CEB1E3CF31C00068525 /* MMDrawerVisualState.m */,
+				18C03CEC1E3CF31C00068525 /* UIViewController+MMDrawerController.h */,
+				18C03CED1E3CF31C00068525 /* UIViewController+MMDrawerController.m */,
+				18C03CE41E3CF31B00068525 /* runIOT-Bridging-Header.h */,
+			);
+			name = MMdrawer;
+			sourceTree = "<group>";
+		};
+		34F70B8BD3E310E8FB4DD1D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27DD3BAAD9AA1642AA403FB8 /* Pods_runIOT.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBCE85148E0A1EA6CFCF60F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43C8DA19F60D8AFE10D027D2 /* Pods-runIOT.debug.xcconfig */,
+				C6F67761E422C07CA8EE072A /* Pods-runIOT.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +151,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18C03CDC1E3CEDE700068525 /* Build configuration list for PBXNativeTarget "runIOT" */;
 			buildPhases = (
+				33A10DB7FB1E1DF1824EC0B7 /* [CP] Check Pods Manifest.lock */,
 				18C03CC31E3CEDE600068525 /* Sources */,
 				18C03CC41E3CEDE600068525 /* Frameworks */,
 				18C03CC51E3CEDE600068525 /* Resources */,
+				04D48F2BAE0A4D58820D1737 /* [CP] Embed Pods Frameworks */,
+				5E4738ADDF9B6BF7A5303F68 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -99,6 +179,8 @@
 				TargetAttributes = {
 					18C03CC61E3CEDE600068525 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = W7YVLX4PDN;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -127,21 +209,80 @@
 			buildActionMask = 2147483647;
 			files = (
 				18C03CD81E3CEDE700068525 /* LaunchScreen.storyboard in Resources */,
+				18ED4B6F1E3D0551000880EE /* ninja512.jpg in Resources */,
 				18C03CD51E3CEDE700068525 /* Assets.xcassets in Resources */,
 				18C03CD01E3CEDE700068525 /* Main.storyboard in Resources */,
+				18C03CE01E3CEFF600068525 /* ninja512.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04D48F2BAE0A4D58820D1737 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-runIOT/Pods-runIOT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33A10DB7FB1E1DF1824EC0B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5E4738ADDF9B6BF7A5303F68 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-runIOT/Pods-runIOT-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18C03CC31E3CEDE600068525 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18C03CCD1E3CEDE700068525 /* ViewController.swift in Sources */,
+				18C03CE21E3CF1F600068525 /* menuController.swift in Sources */,
+				18C03CEE1E3CF31C00068525 /* MMDrawerBarButtonItem.m in Sources */,
+				18C03CF11E3CF31C00068525 /* UIViewController+MMDrawerController.m in Sources */,
 				18C03CCB1E3CEDE700068525 /* AppDelegate.swift in Sources */,
+				18ED4B791E3D1447000880EE /* aboutViewController.swift in Sources */,
+				18C03CEF1E3CF31C00068525 /* MMDrawerController.m in Sources */,
+				18C03CF31E3CFCE600068525 /* centerViewController.swift in Sources */,
+				18ED4B7B1E3D18FC000880EE /* settingsViewController.swift in Sources */,
+				18ED4B7D1E3D2211000880EE /* collCollectionViewCell.swift in Sources */,
 				18C03CD31E3CEDE700068525 /* runIOT.xcdatamodeld in Sources */,
+				18ED4B771E3D0E83000880EE /* menuTableViewCell.swift in Sources */,
+				18C03CF01E3CF31C00068525 /* MMDrawerVisualState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,24 +401,35 @@
 		};
 		18C03CDD1E3CEDE700068525 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43C8DA19F60D8AFE10D027D2 /* Pods-runIOT.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = W7YVLX4PDN;
 				INFOPLIST_FILE = runIOT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boomboxninjas.runIOT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "runIOT/runIOT-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		18C03CDE1E3CEDE700068525 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6F67761E422C07CA8EE072A /* Pods-runIOT.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = W7YVLX4PDN;
 				INFOPLIST_FILE = runIOT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boomboxninjas.runIOT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "runIOT/runIOT-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -301,6 +453,7 @@
 				18C03CDE1E3CEDE700068525 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
