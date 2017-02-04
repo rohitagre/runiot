@@ -91,9 +91,9 @@ import Foundation
                 }
             }
         }
-        
-        
-        mqttConfig.mqttAuthOpts = MQTTAuthOpts(username: "atdwhkss", password: "TtYrj2TrBBM1")
+        //
+        //
+        mqttConfig.mqttAuthOpts = MQTTAuthOpts(username: "abc", password: "xxx")
         mqttClient = MQTT.newConnection(mqttConfig, connectImmediately: true)
         
         return true
