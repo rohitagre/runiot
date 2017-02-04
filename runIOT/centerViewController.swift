@@ -15,9 +15,9 @@ class centerViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBOutlet weak var constat: UILabel!
     
-    let mqttConfig = MQTTConfig(clientId: "ijammer992", host: "m20.cloudmqtt.com", port: 15905, keepAlive: 90)
+    var handle:Timer? = nil
     
-    var mqttClient: MQTTClient? = nil
+    let ad = UIApplication.shared.delegate as? AppDelegate
     
     let reuseIdentifier = "collCell" // also enter this string as the cell identifier in the storyboard
     var items = ["Porch Light", "Fan", "Study Light", "Other"]
@@ -31,50 +31,7 @@ class centerViewController: UIViewController, UICollectionViewDataSource, UIColl
         self.firebtn!.delegate = self
         //set Configuration
         
-        mqttConfig.onConnectCallback = { returnCode in
-            //print("\n\n\nconnection status")
-            //print("\(returnCode.description)")
-            if(returnCode.description.lowercased() == "success")
-            {
-                DispatchQueue.main.async {
-                    
-                    self.constat.textColor = UIColor.hxc(hex: "#2ecc71")
-                    
-                }
-            }
-            else
-            {
-                DispatchQueue.main.async {
-                    
-                    self.constat.textColor = UIColor.hxc(hex: "#e74c3c")
-                    
-                }
-                
-            }
-            //print("\n\n\n")
-        }
-        
-        mqttConfig.onMessageCallback = { mqttMessage in
-            let receivedMessage:String = mqttMessage.payloadString!
-            
-            if(self.initial) {
-                self.stateflag = receivedMessage.lowercased().characters.map { String($0) }
-                self.initial = !self.initial
-            }
-            var i = 0
-            for i in  0..<self.items.count {
-                self.updatecellState(i: i)
-            }
-            
-            
-            print("\n\n\nfrom server msg = \(receivedMessage)")
-            
-        }
-        
-        mqttConfig.mqttAuthOpts = MQTTAuthOpts(username: "atdwhkss", password: "TtYrj2TrBBM1")
-        mqttClient = MQTT.newConnection(mqttConfig, connectImmediately: false)
-        mqttClient?.connectTo(host: "m20.cloudmqtt.com", port: 15905, keepAlive: 60)
-        mqttClient?.subscribe("/ijammer99/inTopic", qos: 1)
+        //connectMQTT()
         // Do any additional setup after loading the view.
     }
     
@@ -108,11 +65,13 @@ class centerViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         
+        if(ad?.mqttClient?.isConnected == false ){
+            self.connectMQTT()
+        }
         
-        let cell = collectionView.cellForItem(at: indexPath) as! collCollectionViewCell
-        //subscribe and publish
-        //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! collCollectionViewCell
-        
+        if(self.handle != nil){
+            self.handle?.invalidate()
+        }
         if(self.stateflag[indexPath.item] == "f"){
             self.stateflag[indexPath.item] = "t"
         }
@@ -120,9 +79,10 @@ class centerViewController: UIViewController, UICollectionViewDataSource, UIColl
             self.stateflag[indexPath.item] = "f"
         }
         let str:String = self.stateflag.joined(separator: "")
-        
-        mqttClient?.publish(string: str, topic: "/ijammer99/inTopic", qos: 1, retain: true)
-        
+        self.handle = setTimeout(delay: 0.7, block: { () -> Void in
+            self.ad?.mqttClient?.publish(string: str, topic: "/ijammer99/inTopic", qos: 1, retain: true)
+            
+        })
         updatecellState(i: indexPath.item)
         
         print("You selected cell #\(indexPath.item)!")
@@ -158,6 +118,14 @@ class centerViewController: UIViewController, UICollectionViewDataSource, UIColl
         }
         
     }
+    
+    func connectMQTT(){
+        
+        self.ad?.mqttClient?.connectTo(host: "m20.cloudmqtt.com", port: 15905, keepAlive: 60)
+        self.ad?.mqttClient?.subscribe("/ijammer99/inTopic", qos: 1)
+        print("\n\n connecting again")
+    }
+    
     
     /*
      // MARK: - Navigation

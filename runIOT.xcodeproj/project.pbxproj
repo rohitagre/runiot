@@ -24,7 +24,7 @@
 		18ED4B791E3D1447000880EE /* aboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED4B781E3D1447000880EE /* aboutViewController.swift */; };
 		18ED4B7B1E3D18FC000880EE /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED4B7A1E3D18FC000880EE /* settingsViewController.swift */; };
 		18ED4B7D1E3D2211000880EE /* collCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED4B7C1E3D2211000880EE /* collCollectionViewCell.swift */; };
-		3AB91D118225E5C36BA4D187 /* Pods_runIOT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DD3BAAD9AA1642AA403FB8 /* Pods_runIOT.framework */; };
+		3AB91D118225E5C36BA4D187 /* Pods_runIOT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DD3BAAD9AA1642AA403FB8 /* Pods_runIOT.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -175,11 +175,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = Boomboxninjas;
+				ORGANIZATIONNAME = Boomboxninjas.in;
 				TargetAttributes = {
 					18C03CC61E3CEDE600068525 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = W7YVLX4PDN;
+						DevelopmentTeam = Q2YW4F7SW7;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -393,6 +393,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -401,15 +402,17 @@
 		};
 		18C03CDD1E3CEDE700068525 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43C8DA19F60D8AFE10D027D2 /* Pods-runIOT.debug.xcconfig */;
+			baseConfigurationReference = C6F67761E422C07CA8EE072A /* Pods-runIOT.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = W7YVLX4PDN;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Q2YW4F7SW7;
 				INFOPLIST_FILE = runIOT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.boomboxninjas.runIOT;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.boomboxninjas.in.runIOT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "runIOT/runIOT-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -424,10 +427,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = W7YVLX4PDN;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Q2YW4F7SW7;
 				INFOPLIST_FILE = runIOT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.boomboxninjas.runIOT;
+				PRODUCT_BUNDLE_IDENTIFIER = com.boomboxninjas.in.runIOT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "runIOT/runIOT-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

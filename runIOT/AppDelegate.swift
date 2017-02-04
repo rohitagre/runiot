@@ -8,13 +8,17 @@
 
 import UIKit
 import CoreData
+import Moscapsule
+import Foundation
 
 @UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
     var centerContainer: MMDrawerController?
-    
+    let mqttConfig = MQTTConfig(clientId: UIDevice.current.name, host: "m20.cloudmqtt.com", port: 15905, keepAlive: 90)
+    var mqttClient: MQTTClient? = nil
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -24,16 +28,73 @@ import CoreData
         
         let menuViewController = mainStoryboard.instantiateViewController(withIdentifier: "menuController") as! menuController
         
-        let centerViewController = mainStoryboard.instantiateViewController(withIdentifier: "centerViewController") as! centerViewController
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "centerViewController") as! centerViewController
         
         let rightNav = UINavigationController(rootViewController: menuViewController)
         
-        centerContainer = MMDrawerController(center: centerViewController, leftDrawerViewController: rightNav)
+        centerContainer = MMDrawerController(center: vc, leftDrawerViewController: rightNav)
         centerContainer!.openDrawerGestureModeMask = MMOpenDrawerGestureMode.panningCenterView;
         centerContainer!.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.panningCenterView;
         window!.rootViewController = centerContainer
         window!.makeKeyAndVisible()
         
+        
+        
+        mqttConfig.onConnectCallback = { returnCode in
+            print("\n\n\nconnection status")
+            print("\(returnCode.description)")
+            if(returnCode.description.lowercased() == "success")
+            {
+                DispatchQueue.main.async {
+                    vc.constat.textColor = UIColor.hxc(hex: "#2ecc71")
+                }
+            }
+            else
+            {
+                DispatchQueue.main.async {
+                    vc.constat.textColor = UIColor.hxc(hex: "#e74c3c")
+                }
+                
+            }
+        }
+        
+        mqttConfig.onDisconnectCallback = { returnCode in
+            print("\n\n\ndisconnection status")
+            print("\(returnCode.description)")
+            if(returnCode.description.lowercased() == "success")
+            {
+                DispatchQueue.main.async {
+                    vc.constat.textColor = UIColor.hxc(hex: "#2ecc71")
+                }
+            }
+            else
+            {
+                DispatchQueue.main.async {
+                    vc.constat.textColor = UIColor.hxc(hex: "#e74c3c")
+                }
+                
+            }
+            print("\n\n\n")
+        }
+        
+        mqttConfig.onMessageCallback = { mqttMessage in
+            let receivedMessage:String = mqttMessage.payloadString!
+            if(receivedMessage.range(of:"^[tf]{4}$", options: .regularExpression) != nil)
+            {
+                vc.stateflag = receivedMessage.lowercased().characters.map { String($0) }
+                
+                print("\n\n\nfrom server msg = \(receivedMessage)")
+                
+                //var i = 0
+                for i in  0..<vc.items.count {
+                    vc.updatecellState(i: i)
+                }
+            }
+        }
+        
+        
+        mqttConfig.mqttAuthOpts = MQTTAuthOpts(username: "atdwhkss", password: "TtYrj2TrBBM1")
+        mqttClient = MQTT.newConnection(mqttConfig, connectImmediately: true)
         
         return true
     }
@@ -127,4 +188,12 @@ extension UIColor {
             alpha: CGFloat(1.0)
         )
     }
+}
+
+func setTimeout(delay:TimeInterval, block:@escaping ()->Void) -> Timer {
+    return Timer.scheduledTimer(timeInterval: delay, target: BlockOperation(block: block), selector: #selector(Operation.main), userInfo: nil, repeats: false)
+}
+
+func setInterval(interval:TimeInterval, block:@escaping ()->Void) -> Timer {
+    return Timer.scheduledTimer(timeInterval: interval, target: BlockOperation(block: block), selector: #selector(Operation.main), userInfo: nil, repeats: true)
 }
