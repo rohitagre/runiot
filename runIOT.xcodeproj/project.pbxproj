@@ -24,6 +24,7 @@
 		18ED4B791E3D1447000880EE /* aboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED4B781E3D1447000880EE /* aboutViewController.swift */; };
 		18ED4B7B1E3D18FC000880EE /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED4B7A1E3D18FC000880EE /* settingsViewController.swift */; };
 		18ED4B7D1E3D2211000880EE /* collCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED4B7C1E3D2211000880EE /* collCollectionViewCell.swift */; };
+		2A491C071E466CFF00556584 /* logo_frontaccounting.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A491C061E466CFF00556584 /* logo_frontaccounting.png */; };
 		3AB91D118225E5C36BA4D187 /* Pods_runIOT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DD3BAAD9AA1642AA403FB8 /* Pods_runIOT.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		18ED4B7A1E3D18FC000880EE /* settingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
 		18ED4B7C1E3D2211000880EE /* collCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collCollectionViewCell.swift; sourceTree = "<group>"; };
 		27DD3BAAD9AA1642AA403FB8 /* Pods_runIOT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_runIOT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A491C061E466CFF00556584 /* logo_frontaccounting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_frontaccounting.png; path = runIOT/Assets.xcassets/logo_frontaccounting.png; sourceTree = "<group>"; };
 		43C8DA19F60D8AFE10D027D2 /* Pods-runIOT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-runIOT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-runIOT/Pods-runIOT.debug.xcconfig"; sourceTree = "<group>"; };
 		C6F67761E422C07CA8EE072A /* Pods-runIOT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-runIOT.release.xcconfig"; path = "Pods/Target Support Files/Pods-runIOT/Pods-runIOT.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 		18C03CBE1E3CEDE600068525 = {
 			isa = PBXGroup;
 			children = (
+				2A491C061E466CFF00556584 /* logo_frontaccounting.png */,
 				18C03CC91E3CEDE600068525 /* runIOT */,
 				18C03CC81E3CEDE600068525 /* Products */,
 				DBCE85148E0A1EA6CFCF60F2 /* Pods */,
@@ -211,6 +214,7 @@
 				18C03CD81E3CEDE700068525 /* LaunchScreen.storyboard in Resources */,
 				18ED4B6F1E3D0551000880EE /* ninja512.jpg in Resources */,
 				18C03CD51E3CEDE700068525 /* Assets.xcassets in Resources */,
+				2A491C071E466CFF00556584 /* logo_frontaccounting.png in Resources */,
 				18C03CD01E3CEDE700068525 /* Main.storyboard in Resources */,
 				18C03CE01E3CEFF600068525 /* ninja512.png in Resources */,
 			);

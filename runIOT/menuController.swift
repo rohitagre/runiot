@@ -40,44 +40,37 @@ class menuController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        //let cell:menuTableViewCell = tableView.cellForRow(at: indexPath) as! menuTableViewCell
-        //let bgColorView = UIView()
-        //bgColorView.backgroundColor = UIColor.hxc(hex: "#2980b9")
-        //cell.selectedBackgroundView = bgColorView
         
         let cell = tableView.cellForRow(at: indexPath)
-        cell?.textLabel?.text = menuitems[indexPath.row]
-        cell?.textLabel?.textColor = UIColor.hxc(hex: "#333333")
-
-
+        cell?.textLabel?.font = UIFont(name: "HelveticaNeue-Light", size:17)
+        
+        
+        let ad:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
         switch(indexPath.row)
         {
             
         case 0:
             
-            let centerViewController = self.storyboard?.instantiateViewController(withIdentifier:"centerViewController") as! centerViewController
-            let centerNavController = UINavigationController(rootViewController: centerViewController)
-            let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.centerContainer!.centerViewController = centerNavController
-            appDelegate.centerContainer!.toggle(MMDrawerSide.left, animated: true, completion: nil)
+            let cv = self.storyboard?.instantiateViewController(withIdentifier:"centerViewController") as! centerViewController
+            let cn = UINavigationController(rootViewController: cv)
+            ad.centerContainer!.centerViewController = cn
+            ad.centerContainer!.toggle(MMDrawerSide.left, animated: true, completion: nil)
             break;
             
         case 1:
             
-            let centerViewController = self.storyboard?.instantiateViewController(withIdentifier:"settingsViewController") as! settingsViewController
-            let centerNavController = UINavigationController(rootViewController: centerViewController)
-            let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.centerContainer!.centerViewController = centerNavController
-            appDelegate.centerContainer!.toggle(MMDrawerSide.left, animated: true, completion: nil)
+            let sv = self.storyboard?.instantiateViewController(withIdentifier:"settingsViewController") as! settingsViewController
+            let cn = UINavigationController(rootViewController: sv)
+            ad.centerContainer!.centerViewController = cn
+            ad.centerContainer!.toggle(MMDrawerSide.left, animated: true, completion: nil)
             break;
             
         case 2:
-            let centerViewController = self.storyboard?.instantiateViewController(withIdentifier:"aboutViewController") as! aboutViewController
-            let centerNavController = UINavigationController(rootViewController: centerViewController)
-            let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.centerContainer!.centerViewController = centerNavController
-            appDelegate.centerContainer!.toggle(MMDrawerSide.left, animated: true, completion: nil)
+            let av = self.storyboard?.instantiateViewController(withIdentifier:"aboutViewController") as! aboutViewController
+            let cn = UINavigationController(rootViewController: av)
+            ad.centerContainer!.centerViewController = cn
+            ad.centerContainer!.toggle(MMDrawerSide.left, animated: true, completion: nil)
             break;
             
         default:
@@ -87,19 +80,7 @@ class menuController: UIViewController, UITableViewDataSource, UITableViewDelega
             
         }
     }
-    public func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath)
-    {
-        //let cell = tableView.cellForRow(at: indexPath)
-        ////cell?.contentView.backgroundColor = UIColor.hxc(hex: "#2980b9")
-        //cell?.backgroundColor = UIColor.hxc(hex: "#2980b9")
-    }
     
-    public func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath)
-    {
-       // let cell = tableView.cellForRow(at: indexPath)
-        //cell?.contentView.backgroundColor = UIColor.orange
-       	//	 cell?.backgroundColor = UIColor.orange
-    }
     public func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool
     {
         return true
@@ -107,9 +88,8 @@ class menuController: UIViewController, UITableViewDataSource, UITableViewDelega
     public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath)
     {
         let cell = tableView.cellForRow(at: indexPath)
-        cell?.textLabel?.text = menuitems[indexPath.row]
-        cell?.textLabel?.textColor = UIColor.hxc(hex: "#ffffff")    }
-    
+        cell?.textLabel?.font = UIFont(name: "HelveticaNeue-Thin", size:17)
+    }
     
     
     /*
