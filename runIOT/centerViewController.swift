@@ -15,7 +15,7 @@ class centerViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBOutlet weak var constat: UILabel!
     
-    let mqttConfig = MQTTConfig(clientId: "ijammer99", host: "test.mosquitto.org", port: 1883, keepAlive: 90)
+    let mqttConfig = MQTTConfig(clientId: "ijammer992", host: "m20.cloudmqtt.com", port: 15905, keepAlive: 90)
     
     var mqttClient: MQTTClient? = nil
     
@@ -71,9 +71,9 @@ class centerViewController: UIViewController, UICollectionViewDataSource, UIColl
             
         }
         
-        //mqttConfig.mqttAuthOpts = MQTTAuthOpts(username: "uname", password: "passwd")
+        mqttConfig.mqttAuthOpts = MQTTAuthOpts(username: "atdwhkss", password: "TtYrj2TrBBM1")
         mqttClient = MQTT.newConnection(mqttConfig, connectImmediately: false)
-        mqttClient?.connectTo(host: "test.mosquitto.org", port: 1883, keepAlive: 60)
+        mqttClient?.connectTo(host: "m20.cloudmqtt.com", port: 15905, keepAlive: 60)
         mqttClient?.subscribe("/ijammer99/inTopic", qos: 1)
         // Do any additional setup after loading the view.
     }
