@@ -8,29 +8,50 @@
 
 import UIKit
 
-class settingsViewController: UIViewController {
+class settingsViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var usercred: stylingText!
+    @IBOutlet weak var pwd: stylingText!
+    @IBOutlet weak var newscroll: UIScrollView!
+    
+    @IBOutlet weak var save: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.isNavigationBarHidden = true
+        
+        
+        usercred.text = UserDefaults.standard.string(forKey: "uname")
+        pwd.text = UserDefaults.standard.string(forKey: "pwd")
+        
         // Do any additional setup after loading the view.
     }
-
+  
+    @IBAction func saved(_ sender: UIButton) {
+        UserDefaults.standard.set(self.usercred.text, forKey: "uname")
+        UserDefaults.standard.set(self.pwd.text, forKey: "pwd")
+        self.view.endEditing(true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func textFieldDidBeginEditing(_ textField: UITextField)
+    {
+         newscroll.setContentOffset(CGPoint(x:0,y:90), animated: true)
     }
-    */
-
+    
+    func textFieldDidEndEditing(_ textField: UITextField)
+    {
+         newscroll.setContentOffset(CGPoint(x:0,y:0), animated: true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        return true
+    }
+    
 }

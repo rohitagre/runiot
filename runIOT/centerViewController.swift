@@ -45,10 +45,10 @@ class centerViewController: UIViewController, UICollectionViewDataSource, UIColl
             else
             {
                 DispatchQueue.main.async {
-                    
                     self.constat.textColor = UIColor.hxc(hex: "#e74c3c")
                     
                 }
+                self.mqttClient?.disconnect()
                 
             }
             //print("\n\n\n")
@@ -70,13 +70,16 @@ class centerViewController: UIViewController, UICollectionViewDataSource, UIColl
             
         }
         
-        mqttConfig.mqttAuthOpts = MQTTAuthOpts(username: "aaa", password: "ccc")
-        mqttClient = MQTT.newConnection(mqttConfig, connectImmediately: false)
-        
-        mqttClient?.disconnect()
-        mqttClient?.connectTo(host: "m20.cloudmqtt.com", port: 15905, keepAlive: 60)
-        mqttClient?.subscribe("/ijammer99/inTopic", qos: 1)
-        print(mqttClient.debugDescription)
+        if(UserDefaults.standard.string(forKey: "uname") != nil){
+            
+            mqttConfig.mqttAuthOpts = MQTTAuthOpts(username: UserDefaults.standard.string(forKey: "uname")!, password: UserDefaults.standard.string(forKey: "pwd")!)
+            mqttClient = MQTT.newConnection(mqttConfig, connectImmediately: false)
+            
+            mqttClient?.disconnect()
+            mqttClient?.connectTo(host: "m20.cloudmqtt.com", port: 15905, keepAlive: 60)
+            mqttClient?.subscribe("/ijammer99/inTopic", qos: 1)
+            print(mqttClient.debugDescription)
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -87,7 +90,7 @@ class centerViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     
     override func viewWillDisappear(_ animated: Bool){
-    mqttClient?.disconnect()
+        mqttClient?.disconnect()
     }
     
     
@@ -129,9 +132,11 @@ class centerViewController: UIViewController, UICollectionViewDataSource, UIColl
         }
         let str:String = self.stateflag.joined(separator: "")
         
-        self.handle = setTimeout(delay: 0.7, block: { () -> Void in
-            self.mqttClient?.publish(string: str, topic: "/ijammer99/inTopic", qos: 1, retain: true)
-        })
+        if(mqttClient?.isConnected == true){
+            self.handle = setTimeout(delay: 0.7, block: { () -> Void in
+                self.mqttClient?.publish(string: str, topic: "/ijammer99/inTopic", qos: 1, retain: true)
+            })
+        }
         
         
         updatecellState(i: indexPath.item)
