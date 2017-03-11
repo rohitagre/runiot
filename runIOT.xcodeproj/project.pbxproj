@@ -25,6 +25,7 @@
 		18ED4B7B1E3D18FC000880EE /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED4B7A1E3D18FC000880EE /* settingsViewController.swift */; };
 		18ED4B7D1E3D2211000880EE /* collCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED4B7C1E3D2211000880EE /* collCollectionViewCell.swift */; };
 		2A491C071E466CFF00556584 /* logo_frontaccounting.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A491C061E466CFF00556584 /* logo_frontaccounting.png */; };
+		2A8119C71E5F724000DD9029 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8119C61E5F724000DD9029 /* HomeKit.framework */; };
 		2AF1FD7B1E47127300C3F2F5 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2AF1FD7A1E47127300C3F2F5 /* Base.lproj */; };
 		2AF1FD7D1E47127C00C3F2F5 /* settings.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AF1FD7C1E47127C00C3F2F5 /* settings.jpg */; };
 		2AF1FD7F1E47197E00C3F2F5 /* stylingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF1FD7E1E47197E00C3F2F5 /* stylingText.swift */; };
@@ -59,6 +60,8 @@
 		18ED4B7C1E3D2211000880EE /* collCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collCollectionViewCell.swift; sourceTree = "<group>"; };
 		27DD3BAAD9AA1642AA403FB8 /* Pods_runIOT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_runIOT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A491C061E466CFF00556584 /* logo_frontaccounting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_frontaccounting.png; path = Assets.xcassets/logo_frontaccounting.png; sourceTree = "<group>"; };
+		2A8119C61E5F724000DD9029 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		2AD3BB1D1E5210ED006BA82F /* runIOT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = runIOT.entitlements; sourceTree = "<group>"; };
 		2AF1FD7A1E47127300C3F2F5 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		2AF1FD7C1E47127C00C3F2F5 /* settings.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = settings.jpg; path = Assets.xcassets/settings.jpg; sourceTree = "<group>"; };
 		2AF1FD7E1E47197E00C3F2F5 /* stylingText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = stylingText.swift; path = ../stylingText.swift; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A8119C71E5F724000DD9029 /* HomeKit.framework in Frameworks */,
 				3AB91D118225E5C36BA4D187 /* Pods_runIOT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +103,7 @@
 		18C03CC91E3CEDE600068525 /* runIOT */ = {
 			isa = PBXGroup;
 			children = (
+				2AD3BB1D1E5210ED006BA82F /* runIOT.entitlements */,
 				2AF1FD7E1E47197E00C3F2F5 /* stylingText.swift */,
 				18ED4B6E1E3D0551000880EE /* ninja512.jpg */,
 				18C03CE31E3CF2A700068525 /* MMdrawer */,
@@ -142,6 +147,7 @@
 		34F70B8BD3E310E8FB4DD1D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A8119C61E5F724000DD9029 /* HomeKit.framework */,
 				27DD3BAAD9AA1642AA403FB8 /* Pods_runIOT.framework */,
 			);
 			name = Frameworks;
@@ -191,9 +197,23 @@
 				TargetAttributes = {
 					18C03CC61E3CEDE600068525 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = Q2YW4F7SW7;
+						DevelopmentTeam = 88YXX9JLDR;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.HomeKit = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -418,17 +438,18 @@
 		};
 		18C03CDD1E3CEDE700068525 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6F67761E422C07CA8EE072A /* Pods-runIOT.release.xcconfig */;
+			baseConfigurationReference = 43C8DA19F60D8AFE10D027D2 /* Pods-runIOT.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = runIOT/runIOT.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = Q2YW4F7SW7;
+				DEVELOPMENT_TEAM = 88YXX9JLDR;
 				INFOPLIST_FILE = runIOT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.boomboxninjas.in.runIOT;
+				PRODUCT_BUNDLE_IDENTIFIER = com.boomboxninjas.runIOT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "runIOT/runIOT-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -443,11 +464,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = runIOT/runIOT.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = Q2YW4F7SW7;
+				DEVELOPMENT_TEAM = 88YXX9JLDR;
 				INFOPLIST_FILE = runIOT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.boomboxninjas.in.runIOT;
+				PRODUCT_BUNDLE_IDENTIFIER = com.boomboxninjas.runIOT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "runIOT/runIOT-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

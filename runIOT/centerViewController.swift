@@ -22,7 +22,6 @@ class centerViewController: UIViewController, UICollectionViewDataSource, UIColl
     let reuseIdentifier = "collCell" // also enter this string as the cell identifier in the storyboard
     var items = ["Porch Light", "Fan", "Study Light", "Other"]
     var stateflag = ["t","t","t","t"]
-    var initial = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,10 +56,7 @@ class centerViewController: UIViewController, UICollectionViewDataSource, UIColl
         mqttConfig.onMessageCallback = { mqttMessage in
             let receivedMessage:String = mqttMessage.payloadString!
             
-            if(self.initial) {
-                self.stateflag = receivedMessage.lowercased().characters.map { String($0) }
-                self.initial = !self.initial
-            }
+            self.stateflag = receivedMessage.lowercased().characters.map { String($0) }
             for i in  0..<self.items.count {
                 self.updatecellState(i: i)
             }

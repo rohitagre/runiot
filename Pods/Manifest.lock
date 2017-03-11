@@ -1,9 +1,11 @@
 PODS:
   - Moscapsule (0.5.2)
+  - OneSignal (2.3.5)
   - OpenSSL-Universal (1.0.1.20)
 
 DEPENDENCIES:
   - Moscapsule (from `https://github.com/flightonary/Moscapsule.git`)
+  - OneSignal
   - OpenSSL-Universal (~> 1.0.1.18)
 
 EXTERNAL SOURCES:
@@ -17,8 +19,9 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Moscapsule: 16da766e698792911aafd11d9a26c6dbc42199f4
+  OneSignal: 4cb42948ebc141bd5deb54d3fda25105db94f6d4
   OpenSSL-Universal: 71f2c4b2ae758e2218090f905e95ca0ac5c01be7
 
-PODFILE CHECKSUM: 8ec33d1598b74e1708b4dac420bccc631d82de7c
+PODFILE CHECKSUM: 94b49c527a4a067ec606656f12213b3097ade183
 
 COCOAPODS: 1.2.0

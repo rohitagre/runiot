@@ -9,3 +9,4 @@ pod 'OpenSSL-Universal', '~> 1.0.1.18'
 # Pods for runIOT
 
 end
+pod 'OneSignal'

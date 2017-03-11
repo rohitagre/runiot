@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Moscapsule
 import Foundation
+import OneSignal
 
 @UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -20,6 +21,7 @@ import Foundation
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        OneSignal.initWithLaunchOptions(launchOptions, appId: "7a6a641b-665e-4687-80a3-9317c8dd40c6")
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
