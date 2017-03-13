@@ -12,22 +12,18 @@
 		18C03CD31E3CEDE700068525 /* runIOT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18C03CD11E3CEDE700068525 /* runIOT.xcdatamodeld */; };
 		18C03CD51E3CEDE700068525 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C03CD41E3CEDE700068525 /* Assets.xcassets */; };
 		18C03CD81E3CEDE700068525 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C03CD61E3CEDE700068525 /* LaunchScreen.storyboard */; };
-		18C03CE01E3CEFF600068525 /* ninja512.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C03CDF1E3CEFF600068525 /* ninja512.png */; };
 		18C03CE21E3CF1F600068525 /* menuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C03CE11E3CF1F600068525 /* menuController.swift */; };
 		18C03CEE1E3CF31C00068525 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C03CE61E3CF31C00068525 /* MMDrawerBarButtonItem.m */; };
 		18C03CEF1E3CF31C00068525 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C03CE81E3CF31C00068525 /* MMDrawerController.m */; };
 		18C03CF01E3CF31C00068525 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C03CEB1E3CF31C00068525 /* MMDrawerVisualState.m */; };
 		18C03CF11E3CF31C00068525 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C03CED1E3CF31C00068525 /* UIViewController+MMDrawerController.m */; };
 		18C03CF31E3CFCE600068525 /* centerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C03CF21E3CFCE600068525 /* centerViewController.swift */; };
-		18ED4B6F1E3D0551000880EE /* ninja512.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18ED4B6E1E3D0551000880EE /* ninja512.jpg */; };
 		18ED4B771E3D0E83000880EE /* menuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED4B761E3D0E83000880EE /* menuTableViewCell.swift */; };
 		18ED4B791E3D1447000880EE /* aboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED4B781E3D1447000880EE /* aboutViewController.swift */; };
 		18ED4B7B1E3D18FC000880EE /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED4B7A1E3D18FC000880EE /* settingsViewController.swift */; };
 		18ED4B7D1E3D2211000880EE /* collCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED4B7C1E3D2211000880EE /* collCollectionViewCell.swift */; };
-		2A491C071E466CFF00556584 /* logo_frontaccounting.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A491C061E466CFF00556584 /* logo_frontaccounting.png */; };
 		2A8119C71E5F724000DD9029 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8119C61E5F724000DD9029 /* HomeKit.framework */; };
 		2AF1FD7B1E47127300C3F2F5 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2AF1FD7A1E47127300C3F2F5 /* Base.lproj */; };
-		2AF1FD7D1E47127C00C3F2F5 /* settings.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AF1FD7C1E47127C00C3F2F5 /* settings.jpg */; };
 		2AF1FD7F1E47197E00C3F2F5 /* stylingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF1FD7E1E47197E00C3F2F5 /* stylingText.swift */; };
 		3AB91D118225E5C36BA4D187 /* Pods_runIOT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DD3BAAD9AA1642AA403FB8 /* Pods_runIOT.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
@@ -40,7 +36,6 @@
 		18C03CD41E3CEDE700068525 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18C03CD71E3CEDE700068525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18C03CD91E3CEDE700068525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18C03CDF1E3CEFF600068525 /* ninja512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ninja512.png; path = Assets.xcassets/ninja512.png; sourceTree = "<group>"; };
 		18C03CE11E3CF1F600068525 /* menuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuController.swift; sourceTree = "<group>"; };
 		18C03CE41E3CF31B00068525 /* runIOT-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "runIOT-Bridging-Header.h"; sourceTree = "<group>"; };
 		18C03CE51E3CF31C00068525 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
@@ -53,17 +48,14 @@
 		18C03CEC1E3CF31C00068525 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
 		18C03CED1E3CF31C00068525 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
 		18C03CF21E3CFCE600068525 /* centerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = centerViewController.swift; sourceTree = "<group>"; };
-		18ED4B6E1E3D0551000880EE /* ninja512.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ninja512.jpg; path = Assets.xcassets/ninja512.jpg; sourceTree = "<group>"; };
 		18ED4B761E3D0E83000880EE /* menuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuTableViewCell.swift; sourceTree = "<group>"; };
 		18ED4B781E3D1447000880EE /* aboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aboutViewController.swift; sourceTree = "<group>"; };
 		18ED4B7A1E3D18FC000880EE /* settingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
 		18ED4B7C1E3D2211000880EE /* collCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collCollectionViewCell.swift; sourceTree = "<group>"; };
 		27DD3BAAD9AA1642AA403FB8 /* Pods_runIOT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_runIOT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A491C061E466CFF00556584 /* logo_frontaccounting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_frontaccounting.png; path = Assets.xcassets/logo_frontaccounting.png; sourceTree = "<group>"; };
 		2A8119C61E5F724000DD9029 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		2AD3BB1D1E5210ED006BA82F /* runIOT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = runIOT.entitlements; sourceTree = "<group>"; };
 		2AF1FD7A1E47127300C3F2F5 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
-		2AF1FD7C1E47127C00C3F2F5 /* settings.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = settings.jpg; path = Assets.xcassets/settings.jpg; sourceTree = "<group>"; };
 		2AF1FD7E1E47197E00C3F2F5 /* stylingText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = stylingText.swift; path = ../stylingText.swift; sourceTree = "<group>"; };
 		43C8DA19F60D8AFE10D027D2 /* Pods-runIOT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-runIOT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-runIOT/Pods-runIOT.debug.xcconfig"; sourceTree = "<group>"; };
 		C6F67761E422C07CA8EE072A /* Pods-runIOT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-runIOT.release.xcconfig"; path = "Pods/Target Support Files/Pods-runIOT/Pods-runIOT.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,15 +97,12 @@
 			children = (
 				2AD3BB1D1E5210ED006BA82F /* runIOT.entitlements */,
 				2AF1FD7E1E47197E00C3F2F5 /* stylingText.swift */,
-				18ED4B6E1E3D0551000880EE /* ninja512.jpg */,
 				18C03CE31E3CF2A700068525 /* MMdrawer */,
 				18C03CCA1E3CEDE600068525 /* AppDelegate.swift */,
 				18C03CCE1E3CEDE700068525 /* Main.storyboard */,
-				2AF1FD7C1E47127C00C3F2F5 /* settings.jpg */,
 				2AF1FD7A1E47127300C3F2F5 /* Base.lproj */,
 				18C03CD41E3CEDE700068525 /* Assets.xcassets */,
 				18C03CD61E3CEDE700068525 /* LaunchScreen.storyboard */,
-				18C03CDF1E3CEFF600068525 /* ninja512.png */,
 				18C03CD91E3CEDE700068525 /* Info.plist */,
 				18C03CD11E3CEDE700068525 /* runIOT.xcdatamodeld */,
 				18C03CE11E3CF1F600068525 /* menuController.swift */,
@@ -122,7 +111,6 @@
 				18ED4B781E3D1447000880EE /* aboutViewController.swift */,
 				18ED4B7A1E3D18FC000880EE /* settingsViewController.swift */,
 				18ED4B7C1E3D2211000880EE /* collCollectionViewCell.swift */,
-				2A491C061E466CFF00556584 /* logo_frontaccounting.png */,
 			);
 			path = runIOT;
 			sourceTree = "<group>";
@@ -242,12 +230,8 @@
 			files = (
 				18C03CD81E3CEDE700068525 /* LaunchScreen.storyboard in Resources */,
 				2AF1FD7B1E47127300C3F2F5 /* Base.lproj in Resources */,
-				18ED4B6F1E3D0551000880EE /* ninja512.jpg in Resources */,
 				18C03CD51E3CEDE700068525 /* Assets.xcassets in Resources */,
-				2AF1FD7D1E47127C00C3F2F5 /* settings.jpg in Resources */,
-				2A491C071E466CFF00556584 /* logo_frontaccounting.png in Resources */,
 				18C03CD01E3CEDE700068525 /* Main.storyboard in Resources */,
-				18C03CE01E3CEFF600068525 /* ninja512.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

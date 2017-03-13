@@ -66,7 +66,7 @@
                                     <outlet property="delegate" destination="h04-Vd-LF7" id="Vd2-75-vNR"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ninja512.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="27X-jo-0ff">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ninja512" translatesAutoresizingMaskIntoConstraints="NO" id="27X-jo-0ff">
                                 <rect key="frame" x="112.5" y="43" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="43n-S7-JAI"/>
@@ -169,7 +169,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93y-kO-9P1">
-                                <rect key="frame" x="119.5" y="42" width="136" height="46"/>
+                                <rect key="frame" x="120" y="42" width="136" height="46"/>
                                 <attributedString key="attributedText">
                                     <fragment content="RUN">
                                         <attributes>
@@ -189,7 +189,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="●" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZd-Om-QfA">
-                                <rect key="frame" x="314" y="44" width="44.5" height="43"/>
+                                <rect key="frame" x="314" y="44" width="45" height="43"/>
                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="32"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -235,7 +235,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" ambiguous="YES" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="2wn-Uf-MiJ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="settings.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0mg-Fe-tYh">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="0mg-Fe-tYh">
                                         <rect key="frame" x="0.0" y="-24" width="375" height="225"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
@@ -377,7 +377,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_frontaccounting.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zgh-nu-iht">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_frontaccounting" translatesAutoresizingMaskIntoConstraints="NO" id="Zgh-nu-iht">
                                 <rect key="frame" x="85.5" y="194.5" width="204" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="204" id="2Hx-j5-eq1"/>
@@ -425,8 +425,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo_frontaccounting.png" width="320" height="132"/>
-        <image name="ninja512.jpg" width="512" height="512"/>
-        <image name="settings.jpg" width="750" height="420"/>
+        <image name="logo_frontaccounting" width="320" height="132"/>
+        <image name="ninja512" width="513" height="774"/>
+        <image name="settings" width="750" height="420"/>
     </resources>
 </document>
