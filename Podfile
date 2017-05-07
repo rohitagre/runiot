@@ -2,11 +2,10 @@
 # platform :ios, '9.0'
 
 target 'runIOT' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-pod 'Moscapsule', :git => 'https://github.com/flightonary/Moscapsule.git'
+use_frameworks!
+pod 'Persei', '~> 3.0'
+pod 'CocoaMQTT'
 pod 'OpenSSL-Universal', '~> 1.0.1.18'  
-# Pods for runIOT
+pod 'OneSignal'
 
 end
-pod 'OneSignal'

@@ -1,11 +1,11 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Moscapsule" "${PODS_ROOT}/OneSignal/iOS_SDK/Framework"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/CocoaAsyncSocket" "$PODS_CONFIGURATION_BUILD_DIR/CocoaMQTT" "$PODS_CONFIGURATION_BUILD_DIR/Persei" "$PODS_CONFIGURATION_BUILD_DIR/SwiftyTimer" "${PODS_ROOT}/OneSignal/iOS_SDK/OneSignalSDK/Framework"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/OneSignal" "${PODS_ROOT}/Headers/Public/OpenSSL-Universal"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-LIBRARY_SEARCH_PATHS = $(inherited) "$(PODS_ROOT)/OpenSSL-Universal/lib-ios" $(inherited) "${PODS_ROOT}/OpenSSL-Universal/lib-ios"
-OTHER_CFLAGS = -DWITH_THREADING -DWITH_TLS -DWITH_TLS_PSK $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/Moscapsule/Moscapsule.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/OneSignal" -isystem "${PODS_ROOT}/Headers/Public/OpenSSL-Universal"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"crypto" -l"ssl" -framework "Moscapsule" -framework "OneSignal" -framework "SystemConfiguration"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/OpenSSL-Universal/lib-ios"
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/CocoaMQTT/CocoaMQTT.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Persei/Persei.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SwiftyTimer/SwiftyTimer.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/OneSignal" -isystem "${PODS_ROOT}/Headers/Public/OpenSSL-Universal"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"crypto" -l"ssl" -framework "CocoaAsyncSocket" -framework "CocoaMQTT" -framework "OneSignal" -framework "Persei" -framework "SwiftyTimer" -framework "SystemConfiguration" -framework "UIKit" -framework "UserNotifications"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

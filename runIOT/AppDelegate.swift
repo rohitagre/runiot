@@ -8,36 +8,19 @@
 
 import UIKit
 import CoreData
-import Moscapsule
 import Foundation
 import OneSignal
+import Persei
 
 @UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
-    var centerContainer: MMDrawerController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         OneSignal.initWithLaunchOptions(launchOptions, appId: "7a6a641b-665e-4687-80a3-9317c8dd40c6")
         
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        
-        let menuViewController = mainStoryboard.instantiateViewController(withIdentifier: "menuController") as! menuController
-        
-        let vc = mainStoryboard.instantiateViewController(withIdentifier: "centerViewController") as! centerViewController
-        
-        let rightNav = UINavigationController(rootViewController: menuViewController)
-        
-        centerContainer = MMDrawerController(center: vc, leftDrawerViewController: rightNav)
-        centerContainer!.openDrawerGestureModeMask = MMOpenDrawerGestureMode.panningCenterView;
-        centerContainer!.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.panningCenterView;
-        window!.rootViewController = centerContainer
-        window!.makeKeyAndVisible()
-                
         return true
     }
     

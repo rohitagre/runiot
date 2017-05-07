@@ -1,27 +1,29 @@
 PODS:
-  - Moscapsule (0.5.2)
-  - OneSignal (2.3.5)
+  - CocoaAsyncSocket (7.5.1):
+    - CocoaAsyncSocket/GCD (= 7.5.1)
+  - CocoaAsyncSocket/GCD (7.5.1)
+  - CocoaMQTT (1.0.16):
+    - CocoaAsyncSocket (~> 7.5.1)
+    - SwiftyTimer (~> 2.0.0)
+  - OneSignal (2.5.2)
   - OpenSSL-Universal (1.0.1.20)
+  - Persei (3.0)
+  - SwiftyTimer (2.0.0)
 
 DEPENDENCIES:
-  - Moscapsule (from `https://github.com/flightonary/Moscapsule.git`)
+  - CocoaMQTT
   - OneSignal
   - OpenSSL-Universal (~> 1.0.1.18)
-
-EXTERNAL SOURCES:
-  Moscapsule:
-    :git: https://github.com/flightonary/Moscapsule.git
-
-CHECKOUT OPTIONS:
-  Moscapsule:
-    :commit: c7025ecde754c7d080cbb7c374ca0d4041b43bf6
-    :git: https://github.com/flightonary/Moscapsule.git
+  - Persei (~> 3.0)
 
 SPEC CHECKSUMS:
-  Moscapsule: 16da766e698792911aafd11d9a26c6dbc42199f4
-  OneSignal: 4cb42948ebc141bd5deb54d3fda25105db94f6d4
+  CocoaAsyncSocket: e0a7e93b2ffa411592ff87e58524fbbc9b95b4fa
+  CocoaMQTT: c6a4df11a9a660842c5c39d741e9a6caa53444f8
+  OneSignal: 66d08b6b1e3c3858cbf28207ed20f1fa865ab2a2
   OpenSSL-Universal: 71f2c4b2ae758e2218090f905e95ca0ac5c01be7
+  Persei: 2fa633362b1686ec53f8d2d1368ee523b8630742
+  SwiftyTimer: 2efd74b060d69ad4f1496baf5bbedbe132125fcf
 
-PODFILE CHECKSUM: 94b49c527a4a067ec606656f12213b3097ade183
+PODFILE CHECKSUM: e5395129983e1fba5cdfc4f762b996ce7000e49c
 
 COCOAPODS: 1.2.0
